@@ -14,6 +14,18 @@
 
 
 }
+#dt {
+    font-family: monospace;
+    font-size: xx-large;
+    color: #626262;
+    padding: 5px;
+    border: 1px solid #ececec;
+    text-align: center;
+    line-height: 1.5;
+    height:85%
+
+
+}        
 #date{
     font-size:large;
 }
@@ -24,6 +36,7 @@ body{
 </head>
 <body>
     <div id="lbl"></div>
+    <div id="dt"></div>
 </body>
 
 <script>
@@ -54,6 +67,8 @@ body{
         greet = 'Good Evening  ';
 
     document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date} ${hrs}</div>`;
+        greet+=`<div id="date"> It's ${date}</div>`;
+    document.getElementById('dt').innerHTML =
+        date;
 </script> 
 </html>
