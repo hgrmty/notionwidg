@@ -4,7 +4,7 @@
     <style>
 #lbl {
     font-family: monospace;
-    font-size: xx-large;
+    font-size: x-large;
     color: #ffffff;
     padding: 5px;
     /*border: 1px solid #ececec;*/
@@ -39,7 +39,8 @@ body{
 </body>
 
 <script>
-    var weekday = new Array(7);
+    function display() {
+        var weekday = new Array(7);
     weekday[0] = "Sunday";
     weekday[1] = "Monday";
     weekday[2] = "Tuesday";
@@ -66,7 +67,7 @@ body{
 
     document.getElementById('lbl').innerHTML =
         greet+=`<div id="date"> It's ${date}</div>`+`<div id="date"> ${time}</div>`;
-
+    }
 function zeros(num) {
 if (num < 10) {
     num = '0' + num
@@ -75,7 +76,7 @@ return num;
 }
 
 function dateTime() {
-lbl();
+display();
 setTimeout(dateTime, 500);
 }
 
