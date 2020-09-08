@@ -58,9 +58,6 @@ body{
     var hrs = today.getHours();
     var dayOfWeek = weekday[today.getDay()];
     var date = dayOfWeek+" " + today.getDate() + "/" +(today.getMonth()+1) +'/'+today.getFullYear()  ;
-    var hour = zeros(today.getHours());
-    var minutes = zeros(today.getMinutes());
-    var seconds = zeros(today.getSeconds());
     
     var greet;
 
@@ -72,8 +69,7 @@ body{
         greet = 'Good Evening Heggi';
 
     document.getElementById('lbl').innerHTML = greet;
-    document.getElementById('dt').innerHTML ='It&#39s' date;
-    document.getElementById('cl').innerHTML = hour;
+
    
     function zeros(num) {
         if (num < 10) {
