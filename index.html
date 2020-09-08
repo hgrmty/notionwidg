@@ -14,10 +14,10 @@
 
 
 }
-#date{
+#dt{
     font-size:large;
 }
-#clock{
+#cl{
     font-size:large;
 }
 body{
@@ -27,6 +27,8 @@ body{
 </head>
 <body>
     <div id="lbl"></div>
+    <div id="dt"></div>
+    <div id="cl"></div>
 </body>
 
 <script>
@@ -57,9 +59,10 @@ body{
     else if (hrs >= 18 && hrs <= 24)
         greet = 'Good Evening Heggi';
 
-    document.getElementById('lbl').innerHTML =
-        greet+=`<div id="date"> It's ${date}</div>`;
-    
+    document.getElementById('lbl').innerHTML = greet;
+    document.getElementById('dt').innerHTML ='It&#39s' date;
+    document.getElementById('cl').innerHTML = hour;
+   
     function zeros(num) {
         if (num < 10) {
         num = '0' + num
